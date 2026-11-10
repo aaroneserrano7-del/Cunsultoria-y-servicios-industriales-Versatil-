@@ -4,6 +4,8 @@ Fecha: 10 de noviembre de 2026.
 
 Nota de actualización documental: este informe conserva los resultados de la auditoría original. Posteriormente el usuario hizo público el repositorio y compartió el dominio correcto de Netlify, verificado en [DESPLIEGUE.md](DESPLIEGUE.md). Las especificaciones actuales y la construcción estática están en el [índice de documentación](README.md).
 
+Actualización del 10 de noviembre de 2026: tras una autorización posterior y explícita del propietario, el PR #1 se fusionó en `main`. Las referencias siguientes a un PR en borrador y a la ausencia de cambios en `main` describen el momento de la auditoría original. El estado vigente está en [ESTADO_DEL_PROYECTO.md](ESTADO_DEL_PROYECTO.md).
+
 ## Dictamen
 
 **La versión corregida pasa la validación técnica local y la validación remota de GitHub del frontend y del servidor Node.js.** Al iniciar la auditoría, main sólo contenía README.md; el código auditado ya está versionado en una rama de revisión con pull request en borrador y cinco trabajos de GitHub Actions aprobados. No se afirma aprobación para producción ni se certifica la copia instalada en la computadora del usuario, a la que esta sesión no tiene acceso directo.

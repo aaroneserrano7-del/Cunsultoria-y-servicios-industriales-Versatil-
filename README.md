@@ -147,6 +147,6 @@ En PowerShell pueden usarse `npm.cmd` y `npx.cmd`. Las entregas generadas y node
 
 ## GitHub y estado de revisión
 
-El código está en el [PR #1 en borrador](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/pull/1). Las comprobaciones automáticas cubren Node.js 24 y 26 en Ubuntu y Windows, además de Chromium en cuatro tamaños.
+El proyecto completo está integrado en `main` mediante el [PR #1 fusionado](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/pull/1), con autorización del propietario el 10 de noviembre de 2026. Las cinco comprobaciones del PR aprobaron Node.js 24 y 26 en Ubuntu y Windows, además de Chromium en cuatro tamaños. El workflow vuelve a ejecutarse en cada actualización de `main`; su resultado actual se consulta en [GitHub Actions](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/actions).
 
-El PR no se ha fusionado en main. Agregar la configuración de Netlify no conecta cuentas ni despliega automáticamente una nueva versión. El sitio de revisión conserva noindex. El texto íntegro del aviso de privacidad y los datos comerciales pendientes de confirmación están señalados en la documentación.
+La integración incorpora el código y la documentación al repositorio. La configuración de Netlify no conecta cuentas ni ejecuta una publicación por sí misma; el workflow de GitHub valida el proyecto y no incluye despliegue. El sitio de revisión conserva noindex. El texto íntegro del aviso de privacidad y los datos comerciales pendientes de confirmación están señalados en la documentación.

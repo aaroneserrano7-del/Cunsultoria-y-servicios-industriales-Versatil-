@@ -1,5 +1,9 @@
 # Estado de Versátil
 
+## Integración en GitHub
+
+El proyecto completo y su documentación están en `main`. El propietario autorizó la fusión del [PR #1](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/pull/1) el 10 de noviembre de 2026, después de aprobar sus cinco comprobaciones: Node.js 24 y 26 en Ubuntu y Windows, y Chromium con accesibilidad y diseño adaptable. El historial de revisión se conserva. La validación de cada actualización de `main` puede consultarse en [GitHub Actions](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/actions).
+
 ## Alcance vigente
 
 Sitio con diez páginas en HTML, CSS y JavaScript nativos, servido por Node.js 24+. Diseño aprobado con V dorada sin fondo, tipografía serif y animaciones discretas que respetan movimiento reducido.

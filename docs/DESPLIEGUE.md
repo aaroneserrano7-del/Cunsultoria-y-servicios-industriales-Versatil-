@@ -80,7 +80,7 @@ Sube ese ZIP en el área de Deploys. No subas la carpeta de desarrollo completa:
 - Directorio publicado: `dist-static`.
 - Node.js para la construcción: 24.
 
-El archivo prepara el repositorio para Netlify, pero no conecta cuentas, crea proyectos ni ejecuta una publicación por sí mismo. Mientras el código esté en la rama de revisión y no se haya fusionado, una conexión a Git debe seleccionar la rama que contiene la aplicación; main seguía con el commit inicial al preparar esta documentación.
+El archivo prepara el repositorio para Netlify, pero no conecta cuentas, crea proyectos ni ejecuta una publicación por sí mismo. El proyecto completo está en `main` desde la integración autorizada del PR #1 el 10 de noviembre de 2026. Si se configura una conexión de Netlify con GitHub, puede seleccionarse `main` como rama de publicación, con el comando y directorio indicados arriba.
 
 ### Rutas y cabeceras
 
