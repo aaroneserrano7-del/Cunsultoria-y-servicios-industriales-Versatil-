@@ -1,0 +1,46 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Versátil: iniciar y depurar Node.js",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server.js",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "HOST": "127.0.0.1",
+        "PORT": "3000"
+      },
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "serverReadyAction": {
+        "pattern": "Versátil: servidor de desarrollo activo en puerto ([0-9]+)",
+        "uriFormat": "http://127.0.0.1:%s",
+        "action": "openExternally"
+      }
+    },
+    {
+      "name": "Versátil: depurar frontend (servidor iniciado)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:3000",
+      "webRoot": "${workspaceFolder}/public"
+    },
+    {
+      "name": "Versátil: depurar pruebas",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "--test"
+      ],
+      "program": "${workspaceFolder}/test/server.test.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}

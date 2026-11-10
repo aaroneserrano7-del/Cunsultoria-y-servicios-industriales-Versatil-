@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+dist/
+dist-static/
+.netlify/
+*.zip
+test-results/
+playwright-report/

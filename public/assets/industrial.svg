@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 470" fill="none">
+  <title>Ilustración conceptual de transmisión y maquinaria industrial</title>
+  <defs><pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" stroke="#c8d3cd" stroke-width=".7"/></pattern></defs>
+  <path fill="url(#grid)" d="M0 0h520v470H0z"/>
+  <ellipse cx="260" cy="410" rx="220" ry="32" fill="#ced8d2"/>
+  <path d="m78 346 147-80 222 112-148 78z" fill="#779390"/>
+  <path d="M78 346v18l221 111v-19zm221 110 148-78v18l-148 79z" fill="#42635f"/>
+  <path d="m148 241 117-64 123 63-118 63z" fill="#d3ad69" stroke="#183e4b" stroke-width="2"/>
+  <path d="M148 241v101l122 62V303z" fill="#a97536" stroke="#183e4b" stroke-width="2"/>
+  <path d="m270 303 118-63v101l-118 63z" fill="#dbb97e" stroke="#183e4b" stroke-width="2"/>
+  <path d="m160 333 98 50m25-68 94-50m-94 65 94-50m-94 65 94-50m-94 65 94-50m-94 65 94-50" stroke="#8a693e" stroke-width="2"/>
+  <path d="m218 143 76-41 85 43v67l-77 42-84-44z" fill="#203f4b"/>
+  <path d="m218 143 84 43 77-41-85-43z" fill="#52747c"/>
+  <path d="M302 186v68l77-42v-67z" fill="#335864"/>
+  <path d="m230 145 71 36m-56-44 71 36m-56-44 71 36m-56-44 71 36m-56-44 71 36" stroke="#a1b7b7" stroke-width="3"/>
+  <path d="m233 230 27 14v29l-27-14z" fill="#203f4b"/>
+  <ellipse cx="191" cy="285" rx="43" ry="55" transform="rotate(-24 191 285)" fill="#183e4b"/>
+  <ellipse cx="181" cy="289" rx="43" ry="55" transform="rotate(-24 181 289)" fill="#52747c" stroke="#183e4b" stroke-width="3"/>
+  <ellipse cx="181" cy="289" rx="23" ry="31" transform="rotate(-24 181 289)" fill="#183e4b"/>
+  <path d="m176 275-54-29-17 10v24l58 30 14-9z" fill="#adbcb8" stroke="#183e4b" stroke-width="2"/>
+  <path d="m105 256 58 30v24m0-24 13-11" stroke="#183e4b" stroke-width="2"/>
+  <path d="M59 145h115l21 37m183 103h81v-97M335 99V49H210" stroke="#7e9490" stroke-dasharray="4 5"/>
+  <circle cx="59" cy="145" r="5" fill="#be6734"/><circle cx="459" cy="188" r="5" fill="#be6734"/><circle cx="210" cy="49" r="5" fill="#be6734"/>
+  <path d="M55 191v140m-6-132 6-8 6 8m-12 124 6 8 6-8m349 48 47-25m-48 30 1-5 6 1m35-30 6 4-1 5" stroke="#7e9490" stroke-width="1.5"/>
+  <g fill="#be6734"><circle cx="168" cy="252" r="3"/><circle cx="207" cy="277" r="3"/><circle cx="194" cy="327" r="3"/><circle cx="154" cy="302" r="3"/></g>
+</svg>
