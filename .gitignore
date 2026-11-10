@@ -5,5 +5,8 @@ node_modules/
 coverage/
 *.log
 dist/
+dist-static/
+.netlify/
+*.zip
 test-results/
 playwright-report/
