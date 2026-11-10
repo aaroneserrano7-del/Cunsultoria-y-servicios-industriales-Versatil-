@@ -51,7 +51,7 @@ Para abrir siempre la raíz correcta, usa **File → Open Workspace from File** 
 
 El frontend está en `public`; Node.js sólo sirve páginas y recursos. Los enlaces de correo abren la aplicación del visitante. `npm run build` genera una entrega en `dist` que funciona con `node server.js`, sin instalar dependencias.
 
-Consulta [la auditoría estricta](docs/AUDITORIA_ESTRICTA.md) para resultados y límites. El workflow de GitHub está preparado, pero todavía no se ha subido ni ejecutado en el repositorio remoto.
+Consulta [la auditoría estricta](docs/AUDITORIA_ESTRICTA.md) para resultados y límites. El workflow de GitHub se ejecutó correctamente en Linux y Windows con Node 24 y 26, además de Chromium. El código está en el [PR #1 en borrador](https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/pull/1), sin fusionar en main.
 
 ## Estado
 

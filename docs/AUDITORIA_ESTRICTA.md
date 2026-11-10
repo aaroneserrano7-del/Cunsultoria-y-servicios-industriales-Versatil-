@@ -4,9 +4,9 @@ Fecha: 10 de noviembre de 2026.
 
 ## Dictamen
 
-**La versión corregida pasa la validación técnica local del frontend y del servidor Node.js. La validación en GitHub está pendiente: el repositorio remoto sólo contiene README.md.** No se afirma aprobación para producción ni se certifica la copia instalada en la computadora del usuario, a la que esta sesión no tiene acceso directo.
+**La versión corregida pasa la validación técnica local y la validación remota de GitHub del frontend y del servidor Node.js.** Al iniciar la auditoría, main sólo contenía README.md; el código auditado ya está versionado en una rama de revisión con pull request en borrador y cinco trabajos de GitHub Actions aprobados. No se afirma aprobación para producción ni se certifica la copia instalada en la computadora del usuario, a la que esta sesión no tiene acceso directo.
 
-Se corrigieron los defectos reproducibles detectados. La versión auditada se entrega con pruebas y un workflow para repetir la validación al subir el código al repositorio. No se publicó el sitio, no se alteró main y no se enviaron mensajes de correo.
+Se corrigieron los defectos reproducibles detectados. La versión auditada se entrega con pruebas y un workflow que ya ejecutó la validación en GitHub. No se publicó el sitio, no se alteró main y no se enviaron mensajes de correo.
 
 ## Arquitectura revisada
 
@@ -28,8 +28,8 @@ flowchart LR
 
 | ID | Severidad | Hallazgo | Resultado |
 | --- | --- | --- | --- |
-| GH-01 | Alta | GitHub no contiene el código desarrollado. Todos los archivos de aplicación estaban fuera del commit inicial. | Pendiente de subir una rama de revisión; no se modificó el remoto. |
-| GH-02 | Alta | No hay GitHub Actions ni checks ejecutados en el commit remoto. | Workflow creado y YAML analizado; ejecución remota pendiente. |
+| GH-01 | Alta | GitHub no contiene el código desarrollado. Todos los archivos de aplicación estaban fuera del commit inicial. | Resuelto en la rama de revisión y PR #1; main se conserva sin cambios. |
+| GH-02 | Alta | No hay GitHub Actions ni checks ejecutados en el commit remoto. | Workflow validado con actionlint y ejecutado en GitHub; cinco trabajos aprobados. |
 | UI-01 | Media | Las etiquetas pequeñas de área tenían contraste 4.05:1 sobre blanco, inferior al mínimo 4.5:1. | Corregido con acento de texto más oscuro; axe no detecta infracciones en la versión corregida. |
 | UI-02 | Media | El aria-label del logotipo omitía parte de su texto visible, afectando el nombre accesible y comandos por voz. | Corregido: el nombre accesible se obtiene del texto visible. |
 | UI-03 | Media | El menú móvil permanecía oculto si JavaScript estaba desactivado. | Corregido con mejora progresiva; navegación visible sin JavaScript. |
@@ -63,9 +63,9 @@ Las primeras pruebas de navegador detectaron las infracciones de contraste y nom
 | npm audit --audit-level=high | Cero vulnerabilidades reportadas, incluidas las herramientas de desarrollo. |
 | Configuración local | .env, .env.local, node_modules, dist y resultados de pruebas están excluidos de Git. No se leyeron valores privados. |
 
-La validación automatizada de accesibilidad no equivale a una certificación WCAG ni sustituye pruebas manuales con lectores de pantalla. El navegador probado es Chromium. No se han ejecutado las suites en Windows dentro de esta sesión; la matriz de CI las prepara para Linux y Windows con Node 24 y 26.
+La validación automatizada de accesibilidad no equivale a una certificación WCAG ni sustituye pruebas manuales con lectores de pantalla. El navegador probado es Chromium. En GitHub Actions también se ejecutaron las suites en Linux y Windows con Node 24 y 26: doce pruebas por combinación, cero fallos y cero omitidas. La validación de navegador en GitHub se ejecutó en Chromium sobre Ubuntu.
 
-## Comprobación de GitHub
+## Comprobación de GitHub al iniciar la auditoría
 
 Repositorio privado verificado mediante la autenticación existente de la plataforma:
 
@@ -78,7 +78,7 @@ https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versa
 - Check runs: cero.
 - Estados de commit: cero; el estado combinado pendiente no acredita validación.
 
-Se preparó `.github/workflows/validate.yml` para push, pull request y ejecución manual, con:
+Se incorporó `.github/workflows/validate.yml` para push, pull request y ejecución manual, con:
 
 - Matriz de Node 24 y 26 en Ubuntu y Windows.
 - Instalación desde lockfile, sintaxis, HTML, tests, build y prueba de la entrega.
@@ -87,16 +87,28 @@ Se preparó `.github/workflows/validate.yml` para push, pull request y ejecució
 - Permisos mínimos de lectura, sin despliegue ni secretos de correo.
 - Acciones oficiales fijadas a referencias SHA consultadas en sus repositorios.
 
-**No se presenta ese archivo como un workflow ya ejecutado en GitHub.** Para obtener una validación remota real es necesario subir el código y el workflow a una rama y revisar los resultados de Actions. En la revisión inicial no se hizo porque el usuario había indicado que no se publicara nada. Posteriormente autorizó expresamente crear una rama y un pull request de revisión, sin fusionar ni desplegar. El resultado remoto se documentará al concluir esa ejecución.
+## Cierre de la validación remota
+
+El usuario autorizó expresamente crear una rama y un pull request de revisión, sin fusionar ni desplegar.
+
+- Rama: `audit/versatil-validacion-2026-11-10`.
+- Pull request en borrador: https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/pull/1
+- Primera ejecución aprobada: https://github.com/aaroneserrano7-del/Cunsultoria-y-servicios-industriales-Versatil-/actions/runs/42857762153
+- Commit de código validado en esa ejecución: `02d1a360011018bf3097e8120bbde64247674748`.
+- Cinco trabajos aprobados: Node 24/Ubuntu, Node 26/Ubuntu, Node 24/Windows, Node 26/Windows y Chromium/accesibilidad/responsive.
+- Los registros de los cuatro trabajos de Node confirman doce pruebas aprobadas, cero fallos y cero omitidas, además del build y la entrega aislada.
+- El trabajo de navegador confirma las 56 pruebas previstas.
+- El workflow fue validado con actionlint v1.7.12, descargado del proyecto oficial y verificado por SHA-256.
+- Este cierre documental se incorpora después de esa primera ejecución; los cambios posteriores de documentación mantienen el código de aplicación validado. El estado actual del PR y sus ejecuciones posteriores es la referencia para el último commit de la rama.
 
 ## Límites y pendientes
 
-1. GitHub: sincronización del código y ejecución real del workflow pendientes.
+1. GitHub: el código está en una rama con PR en borrador y comprobaciones aprobadas. La fusión en main queda pendiente de revisión del usuario y no se efectuó.
 2. Copia del dispositivo: la auditoría cubre el código de la nube y el ZIP entregado; no demuestra que los archivos del equipo sean idénticos. Puede verificarse allí con npm run validate después de instalar la entrega auditada.
 3. Contenido: falta incorporar el texto íntegro del aviso aprobado que el usuario indicó tener; no se inventó un aviso legal.
 4. Publicación: el sitio permanece en desarrollo, con noindex y robots de bloqueo. Dominio, HTTPS del alojamiento y operación pública no se auditaron porque no hay un despliegue autorizado.
 5. Correo: se validaron los enlaces a las tres direcciones. No se enviaron correos reales ni se verificó recepción en esos buzones. mailto depende de la aplicación o servicio de correo del visitante.
-6. Versionado: los archivos de aplicación y las correcciones locales deben incorporarse a Git para que la rama remota pueda contenerlos y validarlos.
+6. Versionado: los archivos de aplicación, las correcciones y las pruebas ya están incorporados a Git en la rama de revisión. No se reinició ni sobrescribió main.
 
 ## Repetir la validación
 
