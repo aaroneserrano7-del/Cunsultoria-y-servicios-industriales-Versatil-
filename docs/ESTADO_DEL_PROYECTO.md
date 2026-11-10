@@ -48,3 +48,7 @@ Se corrigieron contraste de etiquetas, nombre accesible del logotipo, navegació
 ## Documentación completa y publicación de prueba
 
 El repositorio es público por decisión del usuario. El índice docs/README.md reúne empresa, arquitectura, diseño, esquema de páginas, desarrollo y despliegue. El PDF fuente interno queda fuera de la subida pública. Se versionaron las plantillas de Netlify y el comando build:static, con una prueba de regresión que comprueba index.html en la raíz; la suite de servidor/contenido/entrega pasa ahora trece pruebas. El dominio correcto de Netlify, con kleicha en el nombre, responde con 200 en diez páginas y cuatro recursos. La referencia anteriormente transcrita con otro nombre no corresponde a esa publicación.
+
+## Actualización visual de azul y marca
+
+Se preparó una actualización con azul corporativo #163d83, texto azul profundo #172e55, ilustración industrial en azules y leyenda «Versátil - Web Oficial» en las diez páginas. El logotipo superior aumenta moderadamente y el menú pasa a desplegable a 960 px para conservar espacio. Las 13 pruebas del proyecto y las 56 pruebas de navegador aprobaron; también se revisaron los límites de navegación a 961, 960, 901, 900 y 320 px. Las capturas de diseño muestran esta actualización local. Su entrega estática está preparada para cargar en Netlify; la publicación manual anterior conserva sus archivos hasta que se actualice.

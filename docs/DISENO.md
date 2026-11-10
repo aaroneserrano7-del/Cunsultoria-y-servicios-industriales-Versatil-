@@ -12,17 +12,17 @@ El símbolo está trazado en SVG a partir de la referencia proporcionada y aprob
 
 | Variable CSS | Color | Uso |
 | --- | --- | --- |
-| `--ink` | `#142e3c` | Texto y detalles de alto contraste. |
-| `--navy` | `#102f40` | Encabezados, botones principales y pie. |
+| `--ink` | `#172e55` | Texto y detalles de alto contraste. |
+| `--navy` | `#163d83` | Azul corporativo en franja superior, botones principales y pie. |
 | `--paper` | `#f6f5f0` | Fondo claro corporativo. |
 | `--white` | `#ffffff` | Tarjetas y superficies. |
-| `--line` | `#d8dcd8` | Separadores y bordes. |
-| `--muted` | `#54636b` | Texto secundario. |
+| `--line` | `#d6ddeb` | Separadores y bordes. |
+| `--muted` | `#526079` | Texto secundario. |
 | `--accent` | `#be6734` | Acento cálido, indicadores y decoración. |
 | `--accent-text` | `#a8592b` | Etiquetas pequeñas con contraste corregido. |
 | `--gold` | `#efc071` | Botón claro y detalles sobre azul marino. |
 
-La V emplea un degradado propio en el SVG. La paleta describe la implementación actual; no sustituye un manual de marca impreso con equivalencias CMYK o Pantone aprobadas.
+La actualización visual del 10 de noviembre de 2026 sustituye los matices verdosos por azules también en la ilustración industrial y sus fondos. La V emplea un degradado propio en el SVG. La paleta describe la implementación actual; no sustituye un manual de marca impreso con equivalencias CMYK o Pantone aprobadas.
 
 ## Tipografía
 
@@ -35,7 +35,7 @@ Se emplean fuentes del sistema, sin descargas de servicios externos. El logotipo
 
 ## Componentes y orden visual
 
-- Franja superior de las tres líneas de negocio y estado del sitio.
+- Franja superior de las tres líneas de negocio y leyenda «Versátil - Web Oficial».
 - Cabecera con marca, navegación y botón Cotización.
 - Hero con titular, introducción y llamada a la acción; ilustración conceptual en Inicio.
 - Tarjetas numeradas de departamentos y categorías.
@@ -43,11 +43,13 @@ Se emplean fuentes del sistema, sin descargas de servicios externos. El logotipo
 - Tarjetas de correos con dirección completa y enlace para escribir.
 - Pie con la marca, departamentos, tres correos y enlace de privacidad.
 
+El logotipo del encabezado aumenta moderadamente: símbolo de 64 px y nombre de 46 px en escritorio; símbolo de 50 px y nombre de 39 px en móvil. El descriptor conserva su proporción y la marca del pie mantiene su tamaño.
+
 Los botones son sobrios, de forma rectangular y acompañados por una flecha dibujada con CSS. El sitio prioriza la lectura y la orientación por área.
 
 ## Adaptación a pantallas
 
-El contenedor principal tiene un máximo de 1240 px. Los ajustes principales están definidos a 1100, 900 y 600 px. El menú se convierte en un control desplegable cuando JavaScript está disponible en pantallas pequeñas. Sin JavaScript, los enlaces quedan visibles.
+El contenedor principal tiene un máximo de 1240 px. Los ajustes principales están definidos a 1100, 900 y 600 px, con el cambio de navegación a 960 px para dar espacio al logotipo ampliado. El menú se convierte en un control desplegable cuando JavaScript está disponible en pantallas pequeñas. Sin JavaScript, los enlaces quedan visibles.
 
 Las pruebas cubren 1440, 768, 390 y 320 px. Las tarjetas pasan de varias columnas a una, los correos pueden partirse para evitar desbordamiento y la marca mantiene una composición proporcional.
 
@@ -72,9 +74,9 @@ Al modificar estilos compartidos se deben revisar Inicio, Contacto y Cotización
 
 ## Vistas de la publicación
 
-Capturas de la publicación real de Netlify, comprobada en escritorio y móvil, con movimiento reducido para registrar estados estables:
+Capturas de la actualización visual en escritorio y móvil, tomadas desde el servidor local con movimiento reducido para registrar estados estables:
 
 - [Inicio en escritorio](assets/inicio-escritorio.png).
 - [Inicio en móvil](assets/inicio-movil.png).
 
-Las diez páginas y los cuatro recursos públicos devolvieron 200. Sus catorce archivos se compararon por SHA-256 con el frontend auditado y coincidieron byte por byte.
+La comparación anterior de los catorce archivos públicos con Netlify corresponde a la versión previa a este ajuste visual. La actualización se entrega por separado para su publicación.
