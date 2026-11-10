@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 370" fill="none">
+  <title>V de Versátil con flecha ascendente</title>
+  <defs>
+    <linearGradient id="gold" x1="40" y1="80" x2="240" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a5803f"/>
+      <stop offset=".3" stop-color="#dfcd98"/>
+      <stop offset=".51" stop-color="#b39353"/>
+      <stop offset=".75" stop-color="#d4bd7e"/>
+      <stop offset="1" stop-color="#987333"/>
+    </linearGradient>
+  </defs>
+  <!-- Two interlocking V strokes and the rising arrow, with no background. -->
+  <g fill="url(#gold)" stroke="#997b42" stroke-width="1.5" stroke-linejoin="miter">
+    <path d="M9 95H104L143 160L181 95H235L224 114H193L143 201L93 114H41L91 203V242Z"/>
+    <path d="M108 179L126 210V276L144 309L306 44L286 45L333 15V71L320 57L144 352L108 292Z"/>
+  </g>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "name": "versatil-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
+    "lint:html": "html-validate \"public/**/*.html\"",
+    "test:ui": "playwright test",
+    "build": "node scripts/build.mjs",
+    "validate": "npm run check && npm run lint:html && npm test && npm run build && npm run test:dist",
+    "test:dist": "node scripts/smoke-dist.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.0",
+    "html-validate": "11.21.0"
+  }
+}
